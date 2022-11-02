@@ -1,0 +1,41 @@
+---
+title: "House Project"
+author: "Caesar"
+date: "02/11/2022"
+output: pdf_document
+---
+
+Loading Data:
+```{r pressure, echo=FALSE}
+House <- read.table("https://raw.githubusercontent.com/gedeck/practical-statistics-for-data-scientists/master/data/house_sales.csv")
+
+```
+
+Process Data
+```{r}
+House$AdjSalePriceK <- House$AdjSalePrice / 1000
+``` 
+
+```{r}
+boxplot(AdjSalePriceK ~ NewConstruction, data = House)
+```
+There is not a significant effect of new construction or not on price. Maybe variables explain it.
+
+
+```{r}
+boxplot(AdjSalePriceK ~ PropertyType, data = House) 
+```
+
+```{r}
+boxplot(AdjSalePriceK ~ Bedrooms, data = House)
+```
+
+```{r}
+boxplot(AdjSalePriceK ~ Bathrooms, data = House)
+```
+
+```{r}
+boxplot(AdjSalePriceK ~  TrafficNoise, data = House)
+```
+
+```{r}
