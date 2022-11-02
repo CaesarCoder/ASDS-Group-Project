@@ -19,7 +19,7 @@ House$AdjSalePriceK <- House$AdjSalePrice / 1000
 ```{r}
 boxplot(AdjSalePriceK ~ NewConstruction, data = House)
 ```
-There is not a significant effect of new construction or not on price. Maybe variables explain it.
+
 
 
 ```{r}
@@ -38,4 +38,6 @@ boxplot(AdjSalePriceK ~ Bathrooms, data = House)
 boxplot(AdjSalePriceK ~  TrafficNoise, data = House)
 ```
 
-```{r}
+Summary: 
+
+We compared means between Adjusted Sales Price (AdjSalePrice) and a number of other variables, including: Bathrooms, Bedrooms, Property Type, Newly Constructed, Traffic Noise. We found that the most variation in means was by the number of bathrooms in a house.  Houses with 7 bathrooms on average had the highest Adj. Sale Price. This average sale price then dropped when bathrooms reached 8. Some variation (but not as much) was found based on the variation in means of bedrooms vs adjusted house price. There are a lot of outliers in the comparison of means of number of bathrooms vs adjusted sale price, so for further analysis we suggest taking out some of the outliers to better assess what variation exists within these box plots (between these means).
