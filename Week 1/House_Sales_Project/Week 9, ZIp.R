@@ -60,4 +60,6 @@ dat <- dat %>%
 
 mod4 <- lm(AdjSalePrice ~ SqFtTotLiving + BldgGrade + ZipGroup, data = dat)
 
-stargazer(mod4, type = "html")
+stargazer(mod4, type = "html") # work in Rmd
+
+# if we want 
